@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 65.2%;
+}
+body {
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.alert-overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+}
+
+.alert-dialog {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+}
+
+.dialog-content {
+  width: 46rem;
+}
+.dialog-heading {
+  color: #0f172a;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 1.4rem;
+}
+.dialog-text {
+  font-weight: 400;
+  line-height: 20px;
+  color: #64748b;
+}
+
+/* button sectoin */
+.button-section {
+  justify-content: end;
+  gap: 0.8rem;
+}
+
+.btn {
+  background-color: #0f172a;
+  border-radius: 6px;
+  color: #fff;
+  padding: 8px 16px;
+}
+
+.btn-cancel {
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen AND (max-width: 555px) {
+  .dialog-content {
+    width: 80vw;
+    text-align: center;
+  }
+  .button-section {
+    flex-direction: column-reverse;
+    gap: 0.2rem;
+  }
+}

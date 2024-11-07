@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>alert-dialogue</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="flex">
+    <button title="bt" type="button" class="btn btn-dialog">Show dialog</button>
+    <div class="alert-overlay flex hidden">
+      <div class="alert-dialog flex">
+        <div class="dialog-content">
+          <h3 class="dialog-heading">Are you absolutly sure?</h3>
+          <p class="dialog-text">
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
+          </p>
+        </div>
+        <div class="flex button-section">
+          <button title="cancel" type="button" class="btn btn-cancel">
+            Cancel
+          </button>
+          <button title="continue" type="button" class="btn btn-continue">
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
