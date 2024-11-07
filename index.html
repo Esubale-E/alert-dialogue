@@ -7,11 +7,32 @@
     <title>alert-dialogue</title>
   </head>
   <body class="flex">
-    <button title="bt" type="button" class="btn btn-dialog">Show dialog</button>
-    <div class="alert-overlay flex hidden">
+    <div class="container flex">
+      <!-- desctioption section -->
+      <div class="desc-container flex">
+        <div class="alert-description flex">
+          <h2 class="heading desc-heading">Alert Dialog</h2>
+          <p class="desc-text">
+            A modal dialog that interrupts the user with important content and
+            expects a response.
+          </p>
+        </div>
+
+        <!-- call to action section -->
+        <div class="cta-container flex">
+          <button
+            title="bt"
+            type="button"
+            class="btn btn-dialog"
+            id="dialogBtn"
+          >
+            <a href="#">View docs</a>
+          </button>
+        </div>
+      </div>
       <div class="alert-dialog flex">
         <div class="dialog-content">
-          <h3 class="dialog-heading">Are you absolutly sure?</h3>
+          <h3 class="heading dialog-heading">Are you sure absolutely sure?</h3>
           <p class="dialog-text">
             This action cannot be undone. This will permanently delete your
             account and remove your data from our servers.
@@ -26,6 +47,37 @@
           </button>
         </div>
       </div>
+    </div>
+    <!-- Overlay section -->
+    <div class="alert-overlay flex hidden">
+      <div class="alert-dialog flex">
+        <div class="dialog-content">
+          <h3 class="heading dialog-heading">Are you absolutly sure?</h3>
+          <p class="dialog-text">
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
+          </p>
+        </div>
+        <div class="flex button-section">
+          <button
+            title="cancel"
+            type="button"
+            class="btn btn-cancel"
+            id="cancelBtn"
+          >
+            Cancel
+          </button>
+          <button
+            title="continue"
+            type="button"
+            class="btn btn-continue"
+            id="continueBtn"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+      <button type="button" class="btn btn-close" id="closeBtn">X</button>
     </div>
     <script src="index.js"></script>
   </body>

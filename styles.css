@@ -5,85 +5,164 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 65.2%;
-}
+
 body {
   align-items: center;
-  font-family: Inter, sans-serif;
-  font-size: 1.4rem;
+  font-family: Inter;
+  font-size: 14px;
   height: 100vh;
   justify-content: center;
+  background-color: #ebf0f6;
 }
-
+a {
+  color: #fff;
+}
 .flex {
   display: flex;
 }
 
-.alert-overlay {
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100vh;
-  justify-content: center;
-  position: absolute;
-  width: 100vw;
+.container {
+  background-color: #fff;
+  flex-direction: column;
+  gap: 64px;
+  height: 480px;
+  padding: 32px;
+  width: 792px;
+  border-radius: 6px;
 }
 
+.desc-container {
+  width: 725px;
+  height: 140px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.alert-description {
+  width: 584px;
+  height: 108px;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+/* Headings */
+.heading {
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.desc-heading {
+  font-size: 30px;
+  height: 36px;
+  letter-spacing: -0.0075em;
+  line-height: 36px;
+  width: 169px;
+}
+.dialog-heading {
+  font-size: 18px;
+  height: 28px;
+  line-height: 28px;
+  width: 258px;
+}
 .alert-dialog {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 6px;
   border: 1px solid #cbd5e1;
   flex-direction: column;
-  gap: 2.4rem;
-  padding: 2.4rem;
+  gap: 10px;
+  height: 180px;
+  margin-bottom: 16px;
+  padding: 24px;
+  width: 728px;
 }
 
 .dialog-content {
-  width: 46rem;
+  height: 76px;
+  margin-bottom: 8px;
+  width: 464px;
 }
-.dialog-heading {
-  color: #0f172a;
-  font-size: 1.8rem;
-  font-weight: 600;
+/* Text */
+.desc-text {
+  color: #475569;
+  font-size: 20px;
+  font-weight: 400;
+  height: 56px;
   line-height: 28px;
-  margin-bottom: 1.4rem;
+  width: 584px;
 }
 .dialog-text {
   font-weight: 400;
+  height: 40px;
   line-height: 20px;
-  color: #64748b;
+  width: 464px;
 }
-
-/* button sectoin */
-.button-section {
-  justify-content: end;
-  gap: 0.8rem;
-}
-
-.btn {
-  background-color: #0f172a;
+/* cta */
+.cta-container {
   border-radius: 6px;
-  color: #fff;
+  color: #0f172a;
+  height: 40px;
+  margin-bottom: 0px;
+  width: 96px;
+}
+
+.cta-link {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+/* Buttons */
+.btn-section {
+  height: 40px;
+  width: 464px;
+}
+.btn {
+  background-color: #ffffff;
+  border-radius: 6px;
+  color: #0f172a;
+  font-weight: 500;
+  line-height: 24px;
   padding: 8px 16px;
 }
-
+.btn:hover {
+  cursor: pointer;
+}
 .btn-cancel {
-  background-color: #fff;
+  border-radius: 6px;
   border: 1px solid #e2e8f0;
   color: #0f172a;
 }
+.btn-continue {
+  background-color: #0f172a;
+  color: #ffffff;
+  margin-left: 10px;
+}
+.btn-dialog {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+.btn-close {
+  background-color: #00000010;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
+/* hidden */
 .hidden {
   display: none;
 }
 
-@media screen AND (max-width: 555px) {
-  .dialog-content {
-    width: 80vw;
-    text-align: center;
-  }
-  .button-section {
-    flex-direction: column-reverse;
-    gap: 0.2rem;
-  }
+.alert-overlay {
+  align-items: center;
+  background-color: #00000080;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
 }
