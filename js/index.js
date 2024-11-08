@@ -1,4 +1,3 @@
-const modal = document.querySelector(".alert-overlay");
 const alertOverlay = document.querySelector(".alert-overlay");
 const closeBtnEl = document.getElementById("closeBtn");
 const cancelBtnEl = document.getElementById("cancelBtn");
@@ -7,7 +6,8 @@ const dialogBtnEl = document.getElementById("dialogBtn");
 
 const modalToggler = (event) => {
   event.preventDefault();
-  modal.classList.toggle("hidden");
+  alertOverlay.classList.toggle("hidden");
+  console.log("button clicked");
 };
 
 closeBtnEl.addEventListener("click", (event) => modalToggler(event));
@@ -18,3 +18,11 @@ dialogBtnEl.addEventListener("click", (event) => modalToggler(event));
 alertOverlay.addEventListener("click", (e) => {
   if (e.target.classList.contains("alert-overlay")) modalToggler(e);
 });
+
+/*
+const btnEl = document.querySelectorAll(".btn");
+
+btnEl.forEach((El) =>
+  El.addEventListener("click", (event) => modalToggler(event))
+);
+*/ 
