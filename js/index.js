@@ -7,7 +7,6 @@ const dialogBtnEl = document.getElementById("dialogBtn");
 const modalToggler = (event) => {
   event.preventDefault();
   alertOverlay.classList.toggle("hidden");
-  console.log("button clicked");
 };
 
 closeBtnEl.addEventListener("click", (event) => modalToggler(event));
@@ -25,4 +24,4 @@ const btnEl = document.querySelectorAll(".btn");
 btnEl.forEach((El) =>
   El.addEventListener("click", (event) => modalToggler(event))
 );
-*/ 
+*/
