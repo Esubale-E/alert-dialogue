@@ -1,10 +1,11 @@
 const alertOverlay = document.querySelector(".alert-overlay");
 const continueBtnEl = document.getElementById("continueBtn");
+const continueLink = document.getElementById("continueLink");
 const btnEl = document.querySelectorAll(".btn");
 
 const modalToggler = (event) => {
   event.preventDefault();
-  if (event.target === continueBtnEl)
+  if (event.target === continueBtnEl || event.target === continueLink)
     alert("You have deleted the data succesfully");
 
   alertOverlay.classList.toggle("hidden");
